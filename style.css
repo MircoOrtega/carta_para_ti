@@ -1,0 +1,10 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{height:100vh;display:flex;justify-content:center;align-items:center;background:#ffd6e7;overflow:hidden}
+.window{background:#ffe4ee;border:8px solid #ff9dbb;padding:25px;border-radius:15px;width:350px;text-align:center}
+.cat{width:180px}
+.buttons{position:relative;height:100px;margin-top:15px}
+button{padding:12px 25px;border:none;border-radius:10px;cursor:pointer}
+#yesBtn{background:#ff5e95;color:#fff}
+#noBtn{background:#999;color:#fff;position:absolute}
+.heart{position:absolute;animation:float 4s linear infinite}
+@keyframes float{from{transform:translateY(0)}to{transform:translateY(-800px);opacity:0}}
