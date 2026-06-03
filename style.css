@@ -2,7 +2,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
 }
 
 body{
@@ -19,7 +19,7 @@ body{
     width:380px;
     padding:25px;
     border-radius:20px;
-    box-shadow:0 0 25px rgba(0,0,0,.2);
+    box-shadow:0 0 20px rgba(0,0,0,.2);
     text-align:center;
 }
 
@@ -40,8 +40,8 @@ h1{
 }
 
 button{
-    border:none;
     padding:12px 25px;
+    border:none;
     border-radius:10px;
     cursor:pointer;
     font-size:18px;
@@ -54,7 +54,7 @@ button{
 }
 
 #noBtn{
-    background:#777;
+    background:#666;
     color:white;
     position:absolute;
     left:200px;
@@ -69,10 +69,10 @@ button{
 
 .heart{
     position:absolute;
-    animation:float 5s linear forwards;
+    animation:subir 4s linear forwards;
 }
 
-@keyframes float{
+@keyframes subir{
     from{
         transform:translateY(0);
         opacity:1;
@@ -80,6 +80,9 @@ button{
 
     to{
         transform:translateY(-100vh);
+        opacity:0;
+    }
+}
         opacity:0;
     }
 }
