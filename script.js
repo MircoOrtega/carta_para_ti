@@ -2,32 +2,51 @@ const noBtn = document.getElementById("noBtn");
 const yesBtn = document.getElementById("yesBtn");
 const result = document.getElementById("result");
 
-console.log("Script cargado correctamente");
+let noScale = 1;
+let yesScale = 1;
 
-let noSize = 1;
-let yesSize = 1;
+noBtn.addEventListener("mouseover", () => {
 
-noBtn.addEventListener("mouseenter", () => {
+    noScale -= 0.1;
 
-    noSize -= 0.1;
-
-    if (noSize < 0.2) {
-        noSize = 0.2;
+    if(noScale < 0.2){
+        noScale = 0.2;
     }
 
-    yesSize += 0.15;
+    yesScale += 0.15;
 
-    noBtn.style.transform = scale(${noSize});
-    yesBtn.style.transform = scale(${yesSize});
+    noBtn.style.transform = scale(${noScale});
+    yesBtn.style.transform = scale(${yesScale});
 
     noBtn.style.left = Math.random() * 220 + "px";
-    noBtn.style.top = Math.random() * 70 + "px";
+    noBtn.style.top = Math.random() * 80 + "px";
 });
 
 yesBtn.addEventListener("click", () => {
 
-    result.textContent = "🥰 Sabía que dirías que sí ❤️";
+    result.innerHTML = "🥰 ¡Sabía que dirías que sí! ❤️";
 
-    alert("❤️ Gracias por aceptar ❤️");
+    for(let i = 0; i < 50; i++){
 
+        const heart = document.createElement("div");
+
+        heart.innerHTML = "❤️";
+        heart.classList.add("heart");
+
+        heart.style.left =
+            Math.random() * window.innerWidth + "px";
+
+        heart.style.top =
+            window.innerHeight + "px";
+
+        heart.style.fontSize =
+            (Math.random() * 25 + 15) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 4000);
+    }
+});
 });
